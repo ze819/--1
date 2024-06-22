@@ -1,3 +1,4 @@
+
 export async function all(m) {
     if (!m.isGroup)
         return

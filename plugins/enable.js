@@ -32,7 +32,6 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.jarvis = isEnable
      break
 	case 'pmblocker':
-	case 'pbm':
 isAll = true
 if (!isROwner) {
 global.dfail('rowner', m, conn)
@@ -209,35 +208,54 @@ case 'autobio':
       
     default:
      if (!/[01]/.test(command)) return m.reply(`
-╭━⊱⊱⊱『 *🪩ᴏɴ/ᴏғғ ᴍᴇɴᴜ🪩* 』⊱⊱⊱━╮
+≡ List of options
 
-╭━━━━⊱『 *ᴏᴡɴᴇʀ*』⊱━━━━╮
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴘᴍʙʟᴏᴄᴋᴇʀ
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴏɴʟʏᴅᴍ
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ɢʀᴏᴜᴘᴏɴʟʏ
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴀᴜᴛᴏᴛʏᴘᴇ
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴀᴜᴛᴏʙɪᴏ
-╰━━━━━━━━━━━━━━━╯
-╭━━━━⊱『 *Aᴅᴍɪɴ*』⊱━━━━╮
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴡᴇʟᴄᴏᴍᴇ
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴀɴᴛɪʟɪɴᴋ
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴀᴜᴛᴏsᴛɪᴄᴋᴇʀ
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴅᴇᴛᴇᴄᴛ
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴊᴀʀᴠɪs
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴀɴᴛɪsᴘᴀᴍ
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴀɴᴛɪᴛᴏxɪᴄ
-╰━━━━━━━━━━━━━━╯
-╭━━━━⊱『 *ᴜsᴇʀs*』⊱━━━━╮
-│⛊ ${usedPrefix}ᴏɴ/ᴏғғ ᴄʜᴀᴛʙᴏᴛ 
-╰━━━━━━━━━━━━━━╯
-*🔻Exᴀᴍᴘʟᴇ🔻 :*
-*${usedPrefix}ᴏɴ* ᴡᴇʟᴄᴏᴍᴇ
-*${usedPrefix}ᴏғғ* ᴡᴇʟᴄᴏᴍᴇ
+©──『 *ADMIN*』───©
+☑️ *Below are the CMD you can enable*
+NB: _YOU ENABLE IT BY TYPING :EXAMPLE_= #on welcome etc
+🔰 *welcome* :_For welcoming new members_
+_________________________
+🔰 *antilink* :_For automatic kicking of members who send gc links_ 
+_________________________
+🔰 *hidden*:_only Excel can use this_📡
+_________________________
+🔰  *autosticker* :_Automatically sends stickers if you send picture in gc_
+_________________________
+🔰 *detect*: _Detection of all enablings_
+_________________________
+🔰 *antidelete* : _resends deleted msg_
+_________________________
+🔰 *jarvis* : _Test your self and find out 🤣_
+_________________________
+🔰 *antispam* : _removes members who spam too much in gc_
+_________________________
+🔰 *antitoxic* : _deleted all toxic words sent by anyone_
+╰──────────⳹ 
+◈──『 *USERS*』───⳹
+🔰 *autolevelup* : _Automatically levels up exp on user_
+🔰 *chatbot* : _Turns on the chat bot to be able to chat with the bot_
+╰──────────⳹
+◈──『 *OWNER*』───⳹
+🔰 onlydm : _Can use bot in private msg_
+_________________________
+🔰 *grouponly* :_can use bot in groups only_
+_________________________
+🔰 *autotype* : ( WA-PRESSENSE) _bot will be typing for no reason if others are chatting in groups or dm were bot is_
+_________________________
+🔰 *autobio* : _enables  automatic bio of the bot also you will see that bot is running through this_
+_________________________
+__S_T_A_R_M_D_____BOT
+*STAR-V2* enc-x
+╰──────────©
+*📌 Example :*
+*${usedPrefix}on* welcome
+*${usedPrefix}off* welcome
 `)
       throw false
   }
 
-m.reply(`✅ *${type}* 𝙷𝚊𝚜 𝚋𝚎𝚎𝚗 *${isEnable ? '𝙰𝚌𝚝𝚒𝚟𝚊𝚝𝚎𝚍' : '𝙳𝚎𝚊𝚌𝚝𝚒𝚟𝚊𝚝𝚎𝚍'}* ${isAll ? '𝙵𝚘𝚛 𝚝𝚑𝚒𝚜 𝙶𝚛𝚘𝚞𝚙' : isUser ? '' : '𝙵𝚘𝚛 𝚝𝚑𝚒𝚜 𝙲𝚑𝚊𝚝'}
+m.reply(`
+✅ *${type}* Now *${isEnable ? 'Active' : 'Deactive'}* ${isAll ? 'for this bot' : isUser ? '' : 'for this bot'}
 `.trim()) 
 
 }
@@ -246,3 +264,4 @@ handler.tags = ['config']
 handler.command = /^((en|dis)able|(turn)?o(n|ff)|[01])$/i
 
 export default handler
+
